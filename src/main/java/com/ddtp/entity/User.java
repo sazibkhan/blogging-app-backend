@@ -51,12 +51,12 @@ public class User {
     @Column(name = "Update_By")
     private String updateBy;
 
-/*
+
 
     @JoinColumn(name = "user_id")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<UserRole> userRoleList;
-*/
+
 
 
 }

@@ -6,16 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BlogPostRequest {
+public class BlogPostReactRequest {
 
-    private String blogPostTitle;
-
-    private String blogPostBody;
+    private String reactType;
 
     private String approval;
 
@@ -30,5 +27,6 @@ public class BlogPostRequest {
     private LocalDateTime updateAt;
 
     private String updateBy;
+
 
 }

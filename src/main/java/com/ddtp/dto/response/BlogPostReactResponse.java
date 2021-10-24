@@ -1,21 +1,18 @@
-package com.ddtp.dto.request;
+package com.ddtp.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
-
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BlogPostRequest {
+@Builder
+public class BlogPostReactResponse {
 
-    private String blogPostTitle;
+    private String id;
 
-    private String blogPostBody;
+    private String reactType;
 
     private String approval;
 
