@@ -22,28 +22,28 @@ public class BlogPostReactController {
 
     private final BlogPostReactService blogPostReactService;
 
-    @PostMapping("/blogPostReact/insert")
+    @PostMapping("/postreact/insert")
     public ResponseEntity<BlogPostReact> insertBlogPostReact(@RequestBody BlogPostReactRequest blogPostReactRequest  ){
         return new ResponseEntity(blogPostReactService.insertBlogPostReact(blogPostReactRequest), HttpStatus.CREATED);
     }
 
-    @GetMapping("/blogPostReact/get/allInformation")
+    @GetMapping("/postreact/get/allInformation")
     public ResponseEntity<List<BlogPostReactResponse>> getAllBlogPostReact(){
         return new ResponseEntity(blogPostReactService.getAllBlogPostReactInformation(),HttpStatus.OK) ;
     }
 
-    @GetMapping("/blogPostReact/get/allInformation/by/{id}")
+    @GetMapping("/postreact/get/allInformation/by/{id}")
     public ResponseEntity<UserResponse>getBlogPostReactByBlogPostReactId(@PathVariable String id){
         return new ResponseEntity(blogPostReactService.getBlogPostReactInformationById(id),HttpStatus.OK);
     }
 
-    @PutMapping("/blogPostReact/get/Information/updateBy/{id}")
+    @PutMapping("/postreact/get/Information/updateBy/{id}")
     public ResponseEntity <Void> getBlogPostReactUpdateByBlogPostReactId(@RequestBody BlogPostReactRequest blogPostReactRequest, @PathVariable String id){
         blogPostReactService.updateBlogPostReactInformationById(id,blogPostReactRequest);
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @DeleteMapping("/blogpost/delete/Information/by/{id}")
+    @DeleteMapping("/postreact/delete/Information/by/{id}")
     public ResponseEntity<Void> deleteBlogPostReactByBlockPostReactId(@PathVariable String id){
         return new ResponseEntity(blogPostReactService.deleteBlogPostReactInformationBy(id),HttpStatus.NO_CONTENT);
     }
